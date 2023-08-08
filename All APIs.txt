@@ -1,0 +1,43 @@
+GetALLEmployeeList
+https://localhost:7278/api/Employee/GetALLEmployeeList
+
+GetALLDesignationList
+https://localhost:7278/api/Employee/GetALLDesignationList
+
+GetAllDepartmentList
+https://localhost:7278/api/Employee/GetAllDepartmentList
+
+GetEmpByEmpId?NUMBER
+https://localhost:7278/api/Employee/GetEmpByEmpId?id=E0001
+
+ViewSalarySlipData
+https://localhost:7278/api/Employee/ViewSalarySlipData?EmployeeId=
+
+PostEmployeeeThroughSP
+https://localhost:7278/api/Employee/PostEmployeeeThroughSP
+
+UpdateEmpThroughSP
+https://localhost:7278/api/Employee/UpdateEmpThroughSP
+
+DeleteEmpByEmpId
+https://localhost:7278/api/Employee/DeleteEmpByEmpId?id=E0008
+
+"employeeName": "Astitva",
+  "companyName": "SmartData EnterPrises",
+  "companyAddress": "Sahastradhara Road, Dehradun, Uttarakhand",
+  "month": "April",
+  "year": 2023,
+  "doj": "2023-03-13T17:30:30.016Z",
+  "designationId": 105,
+  "departmentId": 1001,
+  "uan": "UAN202300001",
+  "pfno": "PF001",
+  "bankName": "Indian Overseas Bank",
+  "accountNo": 28020000,
+  "esino": 172190205,
+  "basicWages": 50000,
+  "hra": 2500,
+  "isActive": true,
+  "createdBy": "SDD",
+  "createdDate": "2023-04-30T17:30:30.016Z",
+  "isDeleted": false
