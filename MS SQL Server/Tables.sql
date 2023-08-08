@@ -43,13 +43,8 @@ Create Table AstitvaDesignation2904(
 	DesignationId int Not Null Identity(101,1) Primary Key,
 	Designation varchar(20)
 )
+
 
-Drop Table AstitvaEmployees2904
-
-Update AstitvaEmployees2904 Set UAN='UAN202300003' where EmployeeId ='E0003' 
-
-Update AstitvaEmployees2904 Set IsActive=1 where EmployeeId ='E0013' 
-Update AstitvaEmployees2904 Set IsDeleted=0 where EmployeeId ='E0013' 
 
 Select * From AstitvaEmployees2904
 Select * From AstitvaDepartment2904
