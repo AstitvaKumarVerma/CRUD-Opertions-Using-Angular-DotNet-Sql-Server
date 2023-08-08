@@ -1,0 +1,16 @@
+.example-form-field {
+    margin-right: 20px;
+  }
+
+.btn-shape {
+  border-radius: 5px;
+  border-color: rgb(102, 188, 238);
+  background-color: rgb(102, 188, 238);
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

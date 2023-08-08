@@ -1,0 +1,18 @@
+.PUTFORM{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btn-shape {
+    border-radius: 5px;
+    border-color: rgb(102, 188, 238);
+    background-color: rgb(102, 188, 238);
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

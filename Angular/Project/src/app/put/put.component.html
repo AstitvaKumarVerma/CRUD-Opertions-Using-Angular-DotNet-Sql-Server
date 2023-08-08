@@ -1,0 +1,188 @@
+<div class="PUTFORM">
+
+    <div matDialogContent class="content">
+        <h2 style="text-align: center;">
+            <b>Update Employee Form</b>
+        </h2>
+        <br><br>
+        <form [formGroup]="UpdateEmployeeForm" (ngSubmit)="UpdateEmployee(UpdateEmployeeForm.value)">
+            
+            <div class="Column input-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Employee Name</mat-label>
+                    <input matInput name="name" formControlName="employeeName" placeholder="EmployeeName">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('employeeName')?.hasError('required')">
+                        EmployeeName Required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Company</mat-label>
+                    <input matInput name="companyName" formControlName="companyName" placeholder="Company Name ">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('companyName')?.hasError('required')">
+                        CompanyName Required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Company Address</mat-label>
+                    <input matInput name="companyAddress" formControlName="companyAddress" placeholder="Company Address">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('companyAddress')?.hasError('required')">
+                        CompanyAddress Required!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <br><br>
+          
+            <div class="Column input-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Month</mat-label>
+                    <mat-select matNativeControl required formControlName="month">
+                        <mat-option value="January">January</mat-option>
+                        <mat-option value="February">February</mat-option>
+                        <mat-option value="March">March</mat-option>
+                        <mat-option value="April">April</mat-option>
+                        <mat-option value="may">may</mat-option>
+                        <mat-option value="June">June</mat-option>
+                        <mat-option value="July">July</mat-option>
+                        <mat-option value="August">August</mat-option>
+                        <mat-option value="September">September</mat-option>
+                        <mat-option value="October">October</mat-option>
+                        <mat-option value="November">November</mat-option>
+                        <mat-option value="December">December</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="UpdateEmployeeForm.get('month')?.hasError('required')">
+                        Month Required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Year</mat-label>
+                    <mat-select matNativeControl required formControlName="year">
+                        <mat-option value="2021">2021</mat-option>
+                        <mat-option value="2022">2022</mat-option>
+                        <mat-option value="2023">2023</mat-option>
+                        <mat-option value="2024">2024</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="UpdateEmployeeForm.get('year')?.hasError('required')">
+                        Year Required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Designation</mat-label>
+                    <mat-select matNativeControl required formControlName="designationId">
+                        <mat-option value="101">Angular Developer</mat-option>
+                        <mat-option value="102">DotNet Developer</mat-option>
+                        <mat-option value="103">IOS Developer</mat-option>
+                        <mat-option value="104">Android Developer</mat-option>
+                        <mat-option value="105">Full Stack Developer</mat-option>
+                        <mat-option value="106">HR</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="UpdateEmployeeForm.get('designationId')?.hasError('required')">
+                        Designation Required!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <br><br>
+
+            <div class="Column input-container">
+                <mat-form-field appearance="fill">
+
+                    <mat-label>Department</mat-label>
+                    <mat-select matNativeControl required formControlName="departmentId">
+                        <mat-option value="1001">MS</mat-option>
+                        <mat-option value="1002">OSBD</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="UpdateEmployeeForm.get('departmentId')?.hasError('required')">
+                        Department Required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill" class="example-form-field">
+                    <mat-label>Date Of Joining</mat-label>
+                    <input matInput [matDatepicker]="datepicker" formControlName="doj">
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel class="btn">Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply class="btn">Apply</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline" >
+                    <mat-label>uan</mat-label>
+                    <input matInput name="uan" type="text" formControlName="uan" placeholder="UAN NO">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('uan')?.hasError('required')">
+                        UAN Required!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <br><br>
+
+            <div class="Column input-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>pfno</mat-label>
+                    <input matInput name="pfno" type="text" formControlName="pfno" placeholder="PF No.">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('pfno')?.hasError('required')">
+                        PFNo. Required!
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>ESI No.</mat-label>
+                    <input matInput name="esino" type="number" formControlName="esino" placeholder="ESI No.">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('esino')?.hasError('required')">
+                        ESI No. Required!
+                    </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline">
+                    <mat-label>Bank Name</mat-label>
+                    <input matInput type="text" name="bankName" formControlName="bankName" placeholder="Bank Name">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('bankName')?.hasError('required')">
+                        BankName Required!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <br><br>
+          
+            <div class="Column input-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Account Number</mat-label>
+                    <input matInput name="accountNo" formControlName="accountNo" placeholder="AccountNumber">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('accountNo')?.hasError('required')">
+                        AccountNumber Required!
+                    </mat-error>
+                </mat-form-field>
+    
+                <mat-form-field appearance="outline">
+                    <mat-label>Basic Wages</mat-label>
+                    <input matInput name="basicWages" type="number" formControlName="basicWages" placeholder="Basic Wages">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('basicWages')?.hasError('required')">
+                        BasicWages Required!
+                    </mat-error>
+                </mat-form-field>
+ 
+                <mat-form-field appearance="outline">
+                    <mat-label>HRA</mat-label>
+                    <input matInput type="number" name="hra" formControlName="hra" placeholder="HRA">
+                    <mat-error *ngIf="UpdateEmployeeForm.get('hra')?.hasError('required')">
+                        HRA Required!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div matDialogActions>
+                <button mat-raised-button class="btn btn-shape" type="button" (click)="cancelButton()"><b>Cancel</b></button>&nbsp;&nbsp;
+                <button mat-raised-button class="btn btn-shape" color="primary" type="submit" [disabled]="!UpdateEmployeeForm.valid"><b>Update</b></button>
+            </div>
+        </form>
+    </div>
+</div>

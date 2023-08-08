@@ -1,0 +1,114 @@
+<div class="table" id="htmlData">
+    <table border="1" [cellSpacing]="0">
+        <tr  style="text-align: center;">
+            <th colspan="4">
+                {{Val.companyName}}
+            </th>
+        </tr>
+
+        <tr style="text-align: center;">
+            <th colspan="4">
+                {{Val.companyAddress}}
+            </th>
+        </tr>
+
+        <tr style="text-align: center;">
+            <th colspan="4">
+                Pay Slip For {{Val.month}}-{{Val.year}}
+            </th>
+        </tr>
+
+        <tr>
+            <th>Employee Id</th>
+            <td>{{Val.employeeId}}</td>
+            <th>Employee Name</th>
+            <td>{{Val.employeeName}}</td>
+        </tr>
+
+        <tr>
+            <th>Designation</th>
+            <td>{{Val.designation}}</td>
+            <th>Department</th>
+            <td>{{Val.department}}</td>
+        </tr>
+
+        <tr>
+            <th>DOJ</th>
+            <td>{{Val.doj | date}}</td>
+            <th>UAN</th>
+            <td>{{Val.uan}}</td>
+        </tr>
+
+        <tr>
+            <th>PF No.</th>
+            <td>{{Val.pfno}}</td>
+            <th>ESI No.</th>
+            <td>{{Val.esino}}</td>
+        </tr>
+
+        <tr>
+            <th>Bank Name</th>
+            <td>{{Val.bankName}}</td>
+            <th>Account No.</th>
+            <td>{{Val.accountNo}}</td>
+        </tr>
+
+        <tr>
+            <th colspan="2">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Earnings
+            </th>
+            <th colspan="2">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                Deductions</th>
+        </tr>
+        <tr>
+            <th>Basic Wages</th>
+            <td>Rs.{{Val.basicWages}}</td>
+            <th>EPF</th>
+            <td>Rs.{{Val.epf}}</td>
+        </tr>
+
+        <tr>
+            <th>HRA</th>
+            <td>Rs.{{Val.hra}}</td>
+            <th>ESI/Health Insurance</th>
+            <td>Rs.{{Val.esi}}</td>
+        </tr>
+
+        <tr>
+            <th>Total Earnings</th>
+            <th>Rs.{{Val.totalEarning}}</th>
+            <th>Total Deductions</th>
+            <th>Rs.{{Val.totalDeduction}}</th>
+        </tr>
+
+        <tr>
+            <th colspan="3">Net Salary</th>
+            <th colspan="1">Rs.{{Val.netSalary}}</th>
+        </tr>
+    </table>
+    <br>
+</div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <!-- ViewSalarySlip Column  -->
+    <ng-container>
+        <button mat-icon-button (click)="OkButton()" class="btn btn-shape">
+            Exit
+        </button>
+
+                        &nbsp;
+
+        <button class="btn btn-success btn-block" (click)="openPDF()">
+            Download PDF
+        </button>
+
+        <br><br>
+
+    </ng-container>
+
