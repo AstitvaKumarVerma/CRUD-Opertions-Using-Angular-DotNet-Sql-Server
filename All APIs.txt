@@ -22,6 +22,7 @@ https://localhost:7278/api/Employee/UpdateEmpThroughSP
 DeleteEmpByEmpId
 https://localhost:7278/api/Employee/DeleteEmpByEmpId?id=E0008
 
+-------------------------  here data is adding in api ("PostEmployeeeThroughSP" Api is Using)  ----------------------------------------
 "employeeName": "Astitva",
   "companyName": "SmartData EnterPrises",
   "companyAddress": "Sahastradhara Road, Dehradun, Uttarakhand",
